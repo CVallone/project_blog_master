@@ -1,0 +1,116 @@
+/* Main CSS page for blog_home.html */
+
+
+body, a {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 200%;
+	font: inherit;
+	vertical-align: baseline;
+    background-color: #2a2f4a;
+    color: #f56c22;
+    font-family: "Gill Sans", sans-serif;
+}
+
+/* highlight over link hover event */
+a:hover {
+  color: orange;
+}
+
+ul {
+    list-style: none;
+    text-decoration: underline;
+}
+
+#type {
+    line-height: 2em;
+    margin: auto;
+}
+
+span {
+  font-weight: bold;
+}
+
+
+#top_heading {
+  font-style: italic;
+}
+
+/* grid area labels */
+.header{
+    grid-area:hd;
+  }
+  .footer{
+    grid-area:ft;
+  }
+  .sidebar{
+    grid-area:sd;
+  }
+  .content1{
+    grid-area:main1;
+  }
+  .content2{
+    grid-area:main2;
+  }
+  .content3{
+    grid-area:main3;
+  }
+
+#footer {
+    float: right;
+    color: yellow;
+}
+
+#flex1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* establish the main grid */
+#wrapper {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "main1"
+    "main2"
+    "main3"
+    "ft";
+}
+
+
+/* changes stacking of components with medium viewport width */
+@media (min-width:600px) and (max-width:900px) {
+    #wrapper {
+        padding: 25px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 15px;
+        grid-template-areas:
+        "hd sd"
+        "main1 main2"
+        "main3 ft";
+    }
+}
+
+/* changes stacking of components with larger viewport width */
+@media (min-width:901px) {
+    #wrapper {
+        padding: 25px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 15px;
+        grid-template-areas:
+        "hd main2 sd"
+        "main1 main2 main3"
+        "ft ft ft";
+    }
+}
