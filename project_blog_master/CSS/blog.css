@@ -1,0 +1,23 @@
+/* Main CSS page for blog_post.html */
+/* * {
+    border: 1px solid black;
+} */
+
+@import url(blog_classes.css);
+@import url(blog_ids.css);
+
+body, a {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 200%;
+	font: inherit;
+	vertical-align: baseline;
+    background-color: #2a2f4a;
+    color: #f56c22;
+    font-family: "Gill Sans", sans-serif;
+}
+
+a:hover {
+    color: orange;
+}

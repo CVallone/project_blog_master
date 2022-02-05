@@ -1,0 +1,94 @@
+.header{
+    grid-area: hd;
+}
+
+.label {
+    grid-area: lbl;
+}
+.image {
+    display: grid;
+    width: auto;
+    padding: 10px 5px;
+    border: .5px;
+    float: left;
+    grid-area: im;
+}
+
+.content1 {
+    border: .5px;
+    padding: 10px 5px;
+    float: right;
+    padding-bottom: 200px;
+    grid-area: main1;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    grid-area: ft;
+}
+
+.list {
+    list-style: none;
+}
+
+/* establish the grid */
+.wrapper {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 15px;
+    grid-template-areas:
+    "hd"
+    "lbl"
+    "im"
+    "main1"
+    "main2"
+    "main3"
+    "ft";
+}
+
+/* changes stacking of components with medium viewport width */
+@media (min-width:600px) {
+    .wrapper {
+        padding: 25px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 15px;
+        grid-template-areas:
+        "hd lbl"
+        "im main1"
+        "ft .";
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.button {
+    /* display: block; */
+    /* border: 0; */
+    /* line-height: 2.5; */
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center; */
+    color: rgb(36, 14, 5); 
+    text-shadow: 2px 2px 2px #000;
+    border-radius: 20px;
+    background-color: rgba(15, 6, 17, 0.281);
+    box-shadow: inset 1px 1px 2px rgba(225, 225, 225, .6),
+                inset -1px -1px 2px rgba(0, 0, 2, 3);
+}
+
+.button:hover {
+    background-color: rgba(39, 16, 44, 0.281);
+}
+
