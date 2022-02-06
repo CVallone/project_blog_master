@@ -5,6 +5,11 @@
 .label {
     grid-area: lbl;
 }
+
+.figure {
+    grid-area: fig;
+}
+
 .image {
     display: grid;
     width: auto;
@@ -20,6 +25,10 @@
     float: right;
     padding-bottom: 200px;
     grid-area: main1;
+}
+
+.social {
+    grid-area: soc;
 }
 
 .footer {
@@ -43,10 +52,10 @@
     grid-template-areas:
     "hd"
     "lbl"
+    "fig"
     "im"
     "main1"
-    "main2"
-    "main3"
+    "soc"
     "ft";
 }
 
@@ -60,8 +69,8 @@
         grid-gap: 15px;
         grid-template-areas:
         "hd lbl"
-        "im main1"
-        "ft .";
+        "main1 fig"
+        "ft soc";
     }
 }
 
@@ -74,12 +83,9 @@
 
 
 .button {
-    /* display: block; */
-    /* border: 0; */
-    /* line-height: 2.5; */
     padding: 0 20px;
     font-size: 1rem;
-    text-align: center; */
+    text-align: center; 
     color: rgb(36, 14, 5); 
     text-shadow: 2px 2px 2px #000;
     border-radius: 20px;
